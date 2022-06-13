@@ -21,7 +21,7 @@ Fertilizer CSV files have been chosen to analyse the data. After uploading files
 After filtering data, we can present to the customer possible investments in fertilizer demand and major consumers.
 
 LOAD:
-We chose a relational database to load our data into as the data that we collected related to each other and could be fit into tables. Our database constitutes of 7 tables, including data about fertiliser products and their relative prices, application rates, global consumption, crop yield and the indicators of three different fertilisers.
+We chose a relational database to load our data into as the data that we collected related to each other and could be fit into tables. Our database constitutes of 6 tables, including data about fertiliser products and their relative prices, application rates, global consumption, crop yield and the indicators of three different fertilisers.
 
 HOW TO LOAD THE TABLES IN TO POSTRESQL:
 Due to the primary keys and the way tables are linked, there is a specific order to load the CSVs in to PostgreSQL:
