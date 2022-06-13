@@ -29,16 +29,11 @@ CREATE TABLE "nitrogen" (
     "fertilizer_indicators" INT   NOT NULL
 );
 
-CREATE TABLE "phosphate" (
+CREATE TABLE "phosphate_potassium" (
     "entity" VARCHAR(255)   NOT NULL,
     "code" VARCHAR(255)   NOT NULL,
-    "fertilizer_indicators" INT   NOT NULL
-);
-
-CREATE TABLE "potassium" (
-    "entity" VARCHAR(255)   NOT NULL,
-    "code" VARCHAR(255)   NOT NULL,
-    "fertilizer_indicators" INT   NOT NULL
+    "fertilizer_indicators_phosphate" INT   NOT NULL,
+    "fertilizer_indicators_potassium" INT   NOT NULL
 );
 
 CREATE TABLE "crop_yeild" (
@@ -63,10 +58,7 @@ REFERENCES "fertilizer_product" ("area");
 ALTER TABLE "nitrogen" ADD CONSTRAINT "fk_nitrogen_entity_code" FOREIGN KEY("entity", "code")
 REFERENCES "global_consumption" ("entity", "code");
 
-ALTER TABLE "phosphate" ADD CONSTRAINT "fk_phosphate_entity_code" FOREIGN KEY("entity", "code")
-REFERENCES "global_consumption" ("entity", "code");
-
-ALTER TABLE "potassium" ADD CONSTRAINT "fk_potassium_entity_code" FOREIGN KEY("entity", "code")
+ALTER TABLE "phosphate_potassium" ADD CONSTRAINT "fk_phosphate_potassium_entity_code" FOREIGN KEY("entity", "code")
 REFERENCES "global_consumption" ("entity", "code");
 
 ALTER TABLE "crop_yeild" ADD CONSTRAINT "fk_crop_yeild_entity_code" FOREIGN KEY("entity", "code")
